@@ -4,19 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300&family=Ubuntu:ital@0;1&display=swap" rel="stylesheet">
+    
     <title>CV Emiliano Vallejo</title>
 </head>
 <body>
     <header>
-        <img src="./images/programador.webp">
-        <h1>EMILIANO VALLEJO</h1>
-        <img src="./IMAGES/yo.jpg" style="border-radius: 50%;">
+        <div class="titulo">
+            <h1>EMILIANO VALLEJO</h1>
+            
+        </div><br>
+        
     </header>
     <main>
         <aside>
-            <h3>Datos Personales:</h3><br>
+            <img src="./IMAGES/yo.jpeg" class="mi-foto">
+            <h3 class="subtitulo">Datos Personales:</h3><br>
             <ul>
-                <li>Direccion: Romero 2180</li>
+                <li>Direccion: Romero 2180, Mar del Plata</li>
                 <li>Telefono: 2236841887</li>
                 <li>Email: emiliano.vallejo@gmail.com</li>
                 <li>Redes: IG @evallejo1979</li>
@@ -24,14 +32,18 @@
             </ul>
         </aside>
         <section>
-            <h3>Habilidades y conocimientos</h3>
-            <p>Soy tecnico electronico orientados a las telecomiunicaciones y tengo conocimientos de programacion web en diversos lenguajes.<br></p>
-            <h3>Experiencia</h3>
-            <p>Me desempeño en una empresa de telecomunicaciones en el area de enlaces satelitales, operando diferentes sistemas y plataformas.<br>Dentro de la programacion tengo desarrollados varios proyectos para gestionar distintas base de datos de los enlaces en mi trabajo.</p>
+            <div class="contenido" style="border-right: 2px solid rgb(2, 2, 45);">
+                <h3 class="subtitulo">Habilidades y conocimientos</h3><br>
+                <p class="parrafo">Soy tecnico electronico orientados a las telecomiunicaciones y tengo conocimientos de programacion web en diversos lenguajes.<br></p>
+            </div>
+            <div class="contenido">
+                <h3 class="subtitulo">Experiencia</h3><br>
+                <p class="parrafo">Me desempeño en una empresa de telecomunicaciones en el area de enlaces satelitales, operando diferentes sistemas y plataformas.<br>Dentro de la programacion tengo desarrollados varios proyectos para gestionar distintas base de datos de los enlaces en mi trabajo.</p>
+            </div>
         </section>
     </main>
     <footer>
-        <img src="./images/firma.png"> <p>Contacto: emiliano.vallejo@gmail.com IG:@evallejo1979</p>
+        <img src="./images/firma.png" style="width: 200px; height: 60px; padding: 10px 20px;"> <p class="parrafo">Contacto: emiliano.vallejo@gmail.com IG:@evallejo1979</p>
     </footer>
 </body>
 </html>

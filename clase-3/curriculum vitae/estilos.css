@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+  }
+:root{
+  --font-title: 'Ubuntu', sans-serif;
+  --font-subtitle: 'Ubuntu', sans-serif;
+  --font-parrafo: 'Manrope', sans-serif;
+  --font-size-s: 16px;
+  --font-size-m: 22px;
+  --font-size-l: 30px;
+  --color-1:#090934;
+  --color-2:#101056;
+  --color-3:rgba(95, 158, 160, 0.8);
+  --color-4:rgba(139, 216, 192, 0.8);
+  --color-5:rgba(212, 247, 236, 0.8);
+
+}
+
+body{
+  background-image:linear-gradient(rgba(235, 237, 243, 0.4),rgba(239, 241, 248, 0.4)), url(./IMAGES/Web.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+header{
+    /*background-image:linear-gradient(rgba(235, 237, 243, 0.4),rgba(239, 241, 248, 0.4)), url(./IMAGES/Web.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30vh;
+  }
+  .mi-foto{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin-right: 50px;  }
+  .titulo{
+    color: var(--color-1);
+    font-size: var(--font-size-l);
+    font-family: var(--font-parrafo);
+  }
+  .subtitulo{
+    color: var(--color-1);
+    font-size: var(--font-size-m);
+    font-family: var(--font-title);
+  }
+  .parrafo{
+    color: var(--color-2);
+    font-size: var(--font-size-s);
+    font-family: var(--font-parrafo);
+  }
+  ul {
+    list-style: none;
+    color: var(--color-2);
+    font-size: var(--font-size-s);
+    font-family: var(--font-parrafo);
+  }
+  aside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-5);
+    justify-content: center;
+  }
+  section{
+    display: flex;
+    background-color: var(--color-4);
+  }
+  .contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-1);
+    background-color: var(--color-3);
+  }
