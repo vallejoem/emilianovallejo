@@ -74,6 +74,7 @@ header{
   }
   .contenido{
     display: flex;
+    flex: 1;
     flex-direction: column;
     align-items: center;
     padding: 15px;
@@ -85,3 +86,7 @@ header{
     color: var(--color-1);
     background-color: var(--color-3);
   }
+footer i{
+  margin: 10px;
+  color: var(--color-1);
+}
