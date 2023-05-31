@@ -1,10 +1,7 @@
-.cont_ppal{
-    display: block;
-}
-
 .contenedor{
     width: 400px;
     height:400px;
     background-color: lightblue;
     margin: 20px auto;
+    display: block;
 }
