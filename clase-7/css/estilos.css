@@ -51,6 +51,10 @@ header nav ul li a:hover{
     
     color: var(--color-4);
 }
+.buscar{
+    font-family: FontAwesome;
+    padding: 8px;
+}
 main{
     width: 100%;
     height: auto;
