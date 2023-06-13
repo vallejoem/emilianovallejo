@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    border: 2px solid black;
+    height: auto;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 400px 400px;
+    grid-template-areas: "item1 item2"
+                        "item1 item3";
+}
+
+.grid-item1{
+    grid-area: item1;
+    background-color: aqua;
+    border: 2px solid black;
+
+}
+.grid-item2{
+    grid-area: item2;
+    background-color: blue;
+    border: 2px solid black;
+}
+.grid-item3{
+    grid-area: item3;
+    background-color: blue;
+    border: 2px solid black;
+}
