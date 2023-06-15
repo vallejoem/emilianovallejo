@@ -1,0 +1,53 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+
+}
+body{
+    background-color: rgb(196, 192, 186);
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+form{
+    padding: 50px;
+    width:35%;
+    display: flex;
+    flex-direction: column;
+}
+form .in-radio{
+    background-color: rgb(155 150 143);
+    border-radius: 9px 0px 9px 0px;
+    padding: 10px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+form .in-radio p{
+    font-size: 14px;
+}
+form .in-radio label{
+    margin: 10px;
+    font-size: 12px;
+}
+form .in-radio .radio{
+    accent-color: black;
+}
+form .input{
+    background-color: rgb(155 150 143);
+    border-radius: 9px 0px 9px 0px;
+    padding: 5px;
+    margin: 5px 0px 5px 0px;
+    outline: none;
+    border: none;
+}
+form textarea{
+    resize: none;
+}
+form .input::placeholder{
+    color: rgba(0, 0, 0, 0.7);
+}
+form .input:hover{
+    background-color: rgb(211, 210, 208);
+    border-bottom: 2px solid rgb(249, 112, 112);
+}
