@@ -1,0 +1,49 @@
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(255, 255, 160);
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+.box1{
+    width: 100px;
+    height: 100px;
+    background-color: red;   
+    z-index: 1;
+}
+.box2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    z-index: 100;
+
+}
+.box3{
+    width: 100px;
+    height: 100px;
+    background-color: green;    
+    z-index: 200;  
+}
+.box1:hover{
+    width: 100px;
+    height: 100px;
+    background-color: red;   
+    z-index: 200;
+}
+.box2:hover{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    z-index: 100;
+
+}
+.box3:hover{
+    width: 100px;
+    height: 100px;
+    background-color: green;    
+    z-index: 1;  
+}
