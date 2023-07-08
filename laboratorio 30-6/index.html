@@ -11,10 +11,10 @@
 </head>
 <body>
     <header class="container-fluid">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
-                    <img src="./images/logo.webp" alt="logo" width="100" height="100"> Pet Shop
+                    <img src="./images/logo.webp" alt="logo" width="80px" height="80px"> Pet Shop
                 </a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,10 +56,7 @@
                     <a class="nav-link" href="#">Nosotros</a>
                   </li>
                 </ul>
-                <form class="d-flex" role="search">
-                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-info" type="submit">Search</button>
-                </form>
+                <button type="button" class="btn btn-dark rounded-pill">Carrito / $ <i class="fa-solid fa-cart-shopping"></i></button>
               </div>
             </div>
           </nav>
@@ -68,7 +65,7 @@
         <div class="col-6 mh-100">
             <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
+                  <div class="carousel-item active" >
                     <img src="./images/alimentos/Biopet.jpg" class="d-block w-100" alt="...">
                   </div>
                   <div class="carousel-item">
@@ -78,7 +75,7 @@
                     <img src="./images/alimentos/pedigree.webp" class="d-block w-100" alt="...">
                   </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Previous</span>
                 </button>
@@ -91,10 +88,10 @@
         <div class="col-6 mh-100">
             <div class="container-fluid d-flex align.items-center h-50">
                 <div class="row align-items-center">
-                  <div class="col">
-                    <img src="./images/alimentos/gati.webp" id="img" class="img-fluid" alt="gati">
+                  <div class="col card-img">
+                    <img src="./images/alimentos/gati.webp" id="img" class="img-fluid imagen" alt="gati">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-primary d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Comprar
                     </button>
 
@@ -104,7 +101,7 @@
                         <div class="modal-content">
                           <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Producto</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
                           </div>
                           <div class="modal-body">
                             <div class="card mb-3" style="max-width: 540px;">
@@ -173,7 +170,7 @@
         </div>
       </div> 
     </main>
-    <div class="h4 pb-2 mb-4 text-info ms-5 mt-5 border-bottom border-info">
+    <div class="h4 pb-2 mb-4 --bs-info-text-emphasis ms-5 mt-5 border-bottom border-info">
       Productos destacados
     </div>
     <div class="card-group">
