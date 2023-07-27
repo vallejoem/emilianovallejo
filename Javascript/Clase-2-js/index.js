@@ -4,31 +4,37 @@ let x = parseInt(prompt("Ingrese un valor: "));
 let y = parseInt(prompt("Ingrese un valor: "));
 let z = parseInt(prompt("Ingrese un valor: "));
 
+if(isNaN(x) || isNaN(y) || isNaN(z)){
+    console.log("error tiene que ingresar un numero");
+}
+else {
+        if (Number.isInteger(x) && Number.isInteger(y) && Number.isInteger(z)) {
+            let max = x;
+            if (y > max) {
+                max = y;
+            }
+            if (z > max) {
+                max = z;
+            }
+        
+            let min = x;
+            if (y < min) {
+                min = y;
+            }
+            if (z < min) {
+                min = z;
+            }
+            console.log(max + ' este es el mayor de los numeros ' + min + ' este es el menor de los numeros');
+        }
 
-if (Number.isInteger(x, y, z)) {
-        max = x;
-        if (y > max) {
-            max = y;
+        else {
+            console.log("Ingrese un valor numerico");
         }
-        if (z > max) {
-            max = z;
-        }
-    }
-    else {
-        console.log("Ingrese un valor numerico");
-    }
-    if (Number.isInteger(x, y, z)) {
-        min = x;
-        if (y < min) {
-            max = y;
-        }
-        if (z < min) {
-            min = z;
-        }
+        
+    
 }
 
 
-console.log(max + ' este es el mayor de los numeros ' + min + ' este es el menor de los numeros');
 
 //Ejercicio 2
 
@@ -59,7 +65,7 @@ if (Number.isInteger(b)) {
         for(let i=1; i<=10; i++){
             let resultado = b*i;
             let division = resultado/i;
-            console.log(resultado +' % ' + i + ' = '+ division);
+            console.log(resultado +' % ' + division + ' = '+ i);
 
         }
     }
