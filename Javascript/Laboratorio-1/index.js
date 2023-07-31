@@ -1,6 +1,6 @@
 
 
-
+// Declaro objeto
 const objectPerson = {
     firstName:'',
     lastName:'',
@@ -8,6 +8,7 @@ const objectPerson = {
     status:''
 }
 
+//Declaro array de objetos con datos
 const arrayPerson=[
     {
         firstName: "Emiliano",
@@ -32,8 +33,11 @@ const arrayPerson=[
     }
 ];
 
+
+// Desestructuro objeto 
 const {name,lastName,edad,status} = objectPerson
 
+// Recorro el array 
 arrayPerson.forEach((objectPerson)=>{
     console.log(`Nombre: ${objectPerson.firstName}  Apellido: ${objectPerson.lastName}  Edad: ${objectPerson.edad} Status: ${objectPerson.status} `);
 });
