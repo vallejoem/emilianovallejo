@@ -1,4 +1,6 @@
 let dataPersona =[];
+
+//Declaracion del objeto 
 const addDataPersona = (firstName,lastName,edad,address,status,dni,condition=true) =>{
     let person ={
         dni,
@@ -17,6 +19,7 @@ const addDataPersona = (firstName,lastName,edad,address,status,dni,condition=tru
 
 }
 
+//Funcion de agregar un registro al array
 const addFormPerson = () =>{
     let firstName = document.getElementById("firstName");
     let lastName = document.getElementById("lastName");
@@ -26,12 +29,13 @@ const addFormPerson = () =>{
     let dni = document.getElementById("dni");
     
     if(dataPersona.some(person => person.dni === dni.value.trim())){
+        //Muestra un mesnsaje si ya existe el registro
         alert("Ya existe un registro con el mismo DNI.");
         return;
     }
 
     if (firstName.value === '' || lastName.value === '' || edad.value === '' || address.value === '' || status.value === '' || dni.value === '') {
-        // Mostrar un mensaje de error o realizar alguna acción para manejar la entrada vacía
+        // Muestra un mensaje si hay alguna entrada vacía
         alert("Por favor completa todos los campos.");
         return;
     } 
@@ -44,7 +48,6 @@ const addFormPerson = () =>{
     address.value='';
     status.value='';
     dni.value='';
-    //Swal.fire('Saved!', '', 'success')
     dni.focus();
     
     console.table(dataPersona);
@@ -52,10 +55,9 @@ const addFormPerson = () =>{
 }
 
 
-
+// Funcion de eliminar un registro por el nombre 
 const eliminarPorNombre = () => {
     let name = prompt("Ingrese el nombre a eliminar: ");
-
     
     const index = dataPersona.length;
 
