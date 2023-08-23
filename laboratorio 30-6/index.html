@@ -56,7 +56,8 @@
                     <a class="nav-link" href="#">Nosotros</a>
                   </li>
                 </ul>
-                <button type="button" class="btn btn-dark rounded-pill">Carrito / $ <i class="fa-solid fa-cart-shopping"></i></button>
+                <button type="button" class="btn btn-dark rounded-pill" id="btnCart">Carrito / <i class="fa-solid fa-cart-shopping"></i> <span id="cartItemCount">0</span></button>
+                <button type="button" class="btn btn-dark rounded-pill d-none" id="btnCleanCart" onclick="cleanCart()">Limpiar Carrito</span></button>
               </div>
             </div>
           </nav>
@@ -91,7 +92,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/gati.webp" id="img" class="img-fluid imagen" alt="gati">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-primary d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Comprar
                     </button>
 
@@ -112,44 +113,231 @@
                                 <div class="col-md-8">
                                   <div class="card-body">
                                     <h5 class="card-title">Alimento Gatti</h5>
+                                    <input type="hidden" id="productName" value="Alimento Gatti">
+                                    <input type="hidden" id="productPrice" value="1000">
                                     <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
-                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3lg y 1'kg</small></p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                           <div class="modal-footer">
-                            <a href="#"><i class="fa-solid fa-circle-xmark"></i></i></a>
-                            <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+                            <p class="card-text" >$1000</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="col">
-                    <img src="./images/alimentos/whiskas.avif" id="img" class="img-fluid" alt="whiskas">
-                    <button type="button" id="btn" class="btn btn-info position-relative top-100 start-50" >Comprar</button>
+                  <div class="col card-img">
+                    <img src="./images/alimentos/Biopet.jpg" id="img" class="img-fluid imagen" alt="biopet">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                      Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel1">Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="./images/alimentos/Biopet.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Biopet</h5>
+                                    <input type="hidden" id="productName" value="Biopet">
+                                    <input type="hidden" id="productPrice" value="3000">
+                                    <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p class="card-text" >$3000</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <img src="./images/alimentos/sabrositos.webp" id="img" class="img-fluid" alt="sabrositos">
-                    <button type="button" id="btn" class="btn btn-info position-relative top-100 start-50" >Comprar</button>
+                  <div class="col card-img">
+                    <img src="./images/alimentos/sabrositos.webp" id="img" class="img-fluid imagen" alt="sabrositos">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                      Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel2">Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="./images/alimentos/sabrositos.webp" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Sabrositos</h5>
+                                    <input type="hidden" id="productName" value="Sabrositos">
+                                    <input type="hidden" id="productPrice" value="1500">
+                                    <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p class="card-text" >$1500</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="container-fluid d-flex align.items-center h-50">
                 <div class="row align-items-center">
-                  <div class="col">
-                    <img src="./images/alimentos/sieger.jpg" id="img" class="img-fluid" alt="sieger">
-                    <button type="button" id="btn" class="btn btn-info position-relative top-100 start-50" >Comprar</button>
+                  <div class="col card-img">
+                    <img src="./images/alimentos/sieger.jpg" id="img" class="img-fluid imagen" alt="sieger">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                      Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel3">Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="./images/alimentos/sieger.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Sieger</h5>
+                                    <input type="hidden" id="productName" value="Sieger">
+                                    <input type="hidden" id="productPrice" value="8000">
+                                    <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p class="card-text" >$8000</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <img src="./images/alimentos/cacique.jpg" id="img" class="img-fluid" alt="cacique">
-                    <button type="button" id="btn" class="btn btn-info position-relative top-100 start-50" >Comprar</button>
+                  <div class="col card-img">
+                    <img src="./images/alimentos/cacique.jpg" id="img" class="img-fluid imagen" alt="cacique">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                      Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel4">Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="./images/alimentos/cacique.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Cacique</h5>
+                                    <input type="hidden" id="productName" value="Cacique">
+                                    <input type="hidden" id="productPrice" value="4500">
+                                    <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p class="card-text" >$4500</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col">
-                    <img src="./images/alimentos/dogui.webp" id="img" class="img-fluid" alt="dogui">
-                    <button type="button" id="btn" class="btn btn-info position-relative top-100 start-50" >Comprar</button>
+                  <div class="col card-img">
+                    <img src="./images/alimentos/dogui.webp" id="img" class="img-fluid imagen" alt="dogui">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                      Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel5">Producto</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="card mb-3" style="max-width: 540px;">
+                              <div class="row g-0">
+                                <div class="col-md-4">
+                                  <img src="./images/alimentos/dogui.webp" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Dogui</h5>
+                                    <input type="hidden" id="productName" value="Dogui">
+                                    <input type="hidden" id="productPrice" value="1300">
+                                    <p class="card-text">Alimento para gatos adultos, sabor salmin y pollo. Contenido de proteinas de 23%</p>
+                                    <p class="card-text"><small class="text-body-secondary">Presentaciones de 1kg 3kg y 10kg</small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <p class="card-text" >$1300</p>
+                            <button type="submit" class="btn btn-light" onclick="addProduct()"><i class="fa-solid fa-cart-plus"></i></button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>           
@@ -268,7 +456,7 @@
     </footer>
 
 
-
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>

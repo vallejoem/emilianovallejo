@@ -21,7 +21,7 @@ const addFormPerson = () => {
     document.getElementById("formRegistry").reset();
 }
 
-//let arrayusuarios = JSON.parse(localStorage.getItem("usuarios"));
+let arrayusuarios = JSON.parse(localStorage.getItem("usuarios"));
 
 const check = () => {
     let checkUser = document.getElementById("verifyUser").value.trim().toLowerCase();
