@@ -1,11 +1,11 @@
-let dataPersona = JSON.parse(localStorage.getItem("usuarios"));
+let dataPersona = JSON.parse(localStorage.getItem("usuarios")) || [];
 
 const addDataPersona = (firstName, lastName, user, pass) => {
                 let person = {
                     firstName,
                     lastName,
                     user,
-                    pass: hash 
+                    pass 
         }
         dataPersona.push(person);
         localStorage.setItem("usuarios", JSON.stringify(dataPersona));
@@ -23,35 +23,23 @@ const addFormPerson = () => {
 
 let arrayusuarios = JSON.parse(localStorage.getItem("usuarios"));
 
-const check = () => {
-    let checkUser = document.getElementById("verifyUser").value.trim().toLowerCase();
-    let checkPass = document.getElementById("verifyPass").value.trim().toLowerCase();
-    
-    let filterUser = filteDataPerson(checkUser, checkPass);
-
-    if(filterUser){
-        ocultar("logContainer");
-        mostrar("welcome");
-        mensaje(`Bienvenido ${filterUser.firstName}`);
-    }
-    else{
-        mensaje("Usuario o contraseña invalido") ;
-    }
-
-    
+const filterDataPerson = (user, pass) => {
+    return dataPersona.find((person) => {
+        return person.user.toLowerCase() === user && person.pass.toLowerCase() === pass;
+    });
 }
 
 const ocultar = (elementId)=>{
     const element = document.getElementById(elementId);
     if(element){
-        element.setAttribute("class", "d-none");
+        element.classList.add("d-none");
     }
 }
 
 const mostrar = (elementId)=>{
     const element = document.getElementById(elementId);
     if(element){
-        element.setAttribute("class", "col-6 bg-secondary text-center");
+        element.classList.remove("d-none");
     }
 }
 
@@ -62,8 +50,29 @@ const mensaje = (texto) => {
     }
 }
 
-const filteDataPerson = (user, pass) => {
-    return dataPersona.find((person) => {
-        return person.user.toLowerCase() === user && person.pass.toLowerCase() === pass;
-    });
+
+const check = () => {
+    let checkUser = document.getElementById("verifyUser").value.trim().toLowerCase();
+    let checkPass = document.getElementById("verifyPass").value.trim().toLowerCase();
+    
+    let filterUser = filterDataPerson(checkUser, checkPass);
+
+    if(filterUser){
+        ocultar("checkContainer");
+        mostrar("welcome");
+        ocultar("btnLog");
+        mostrar("btnUnlog");
+        mensaje(`Bienvenido ${filterUser.firstName}`);
+    }
+    else{
+        alert("Usuario o contraseña invalido") ;
+    }
 }
+
+const reload = ()=>{
+    location.reload();
+
+}
+
+
+

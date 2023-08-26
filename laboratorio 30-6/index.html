@@ -56,8 +56,73 @@
                     <a class="nav-link" href="#">Nosotros</a>
                   </li>
                 </ul>
-                <button type="button" class="btn btn-dark rounded-pill" id="btnCart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartItemCount">0</span></button>
-                <button type="button" class="btn btn-dark rounded-pill d-none" id="btnCleanCart" onclick="cleanCart()"><i class="fa-solid fa-trash"></i></button>
+                <button type="button" class="btn btn-dark rounded-pill m-1" id="btnRegister" data-bs-toggle="modal" data-bs-target="#registroModal">Registrarse</button>
+                  <!-- boton abre el modal para registrarse -->
+                  <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar usuario</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="registerForm">
+                            <div class="mb-3">
+                              <label for="firstName" class="form-label">Nombre:</label>
+                              <input type="text" class="form-control" id="firstName" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="lastName" class="form-label">Apellido:</label>
+                              <input type="text" class="form-control" id="lastName" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="user" class="form-label">Correo electronico:</label>
+                              <input type="text" class="form-control" id="user" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="pass" class="form-label">Contraseña:</label>
+                              <input type="password" class="form-control" id="pass" required>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); addFormPerson();">Iniciar sesión</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <button type="button" class="btn btn-dark rounded-pill m-1 d-none" id="btnLogOut" onclick="event.preventDefault(); logout();">Salir</button>
+                <button type="button" class="btn btn-dark rounded-pill m-1" id="btnLog" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+                  <!-- boton abre el modal para loguearse -->
+                  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Iniciar sesion</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <form id="loginForm">
+                            <div class="mb-3">
+                              <label for="username" class="form-label">Nombre de usuario:</label>
+                              <input type="text" class="form-control" id="username" required>
+                            </div>
+                            <div class="mb-3">
+                              <label for="password" class="form-label">Contraseña:</label>
+                              <input type="password" class="form-control" id="password" required>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="submit" class="btn btn-primary" onclick="event.preventDefault(); check(); " >Iniciar sesión</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <button type="button" class="btn btn-dark rounded-pill m-1" id="btnCart"><i class="fa-solid fa-cart-shopping"></i> <span id="cartItemCount">0</span></button>
+                <button type="button" class="btn btn-dark rounded-pill m-1 d-none" id="btnCleanCart" onclick="cleanCart()"><i class="fa-solid fa-trash"></i></button>
               </div>
             </div>
           </nav>
@@ -92,7 +157,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/gati.webp" id="img" class="img-fluid imagen" alt="gati">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal">
                       Comprar
                     </button>
 
@@ -133,7 +198,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/Biopet.jpg" id="img" class="img-fluid imagen" alt="biopet">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal1" >
                       Comprar
                     </button>
 
@@ -174,7 +239,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/sabrositos.webp" id="img" class="img-fluid imagen" alt="sabrositos">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal2">
                       Comprar
                     </button>
 
@@ -219,7 +284,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/sieger.jpg" id="img" class="img-fluid imagen" alt="sieger">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal3">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal3">
                       Comprar
                     </button>
 
@@ -260,7 +325,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/cacique.jpg" id="img" class="img-fluid imagen" alt="cacique">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal4">
                       Comprar
                     </button>
 
@@ -301,7 +366,7 @@
                   <div class="col card-img">
                     <img src="./images/alimentos/dogui.webp" id="img" class="img-fluid imagen" alt="dogui">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-dark d-none" id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                    <button type="button" class="btnBuy btn btn-dark d-none disabled " id="btn"  data-bs-toggle="modal" data-bs-target="#exampleModal5">
                       Comprar
                     </button>
 
@@ -438,7 +503,7 @@
         </div>
       </div>
     </div>
-    <footer class="container-fluid py-5 bg-info-subtle">
+    <footer class="container-fluid py-5">
       <div class="row">
         <div class="col d-flex justify-content-center align-items-center" style="width: 50%;">
           <img src="./images/alimentos/ahora12.jpg" class="img-fluid px-1"  style="width: 60px; height: 40px;" alt="ahora12">

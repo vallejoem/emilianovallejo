@@ -126,5 +126,8 @@
   display: inline-block !important;
 }
 header{
-  background-color: #bdd5f9;
+  background-color: #f1ae31;
+}
+footer{
+  background-color: #f5c670;
 }
