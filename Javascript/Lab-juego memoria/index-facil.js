@@ -54,9 +54,7 @@ const comparaImagenes = () => {
     }, 1000);
   }
   intentos++;
-  console.log(intentos);
-  console.log(paresEncontrados);
-
+ 
 }
 
 
@@ -79,7 +77,7 @@ imagenElementos.forEach((imagenElemento, index) => {
           alert("GANASTE!!!");
           location.reload();
         }
-        if(intentos>=6){
+        if(intentos>=10){
             intentos=0;
             location.reload();
             alert ("PERDISTE!!!");

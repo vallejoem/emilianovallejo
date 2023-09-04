@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pascuala</title>
+    <link rel="stylesheet" href="./estilos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/19c666822b.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Comic+Neue&family=Grand+Hotel&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar nav1 border-bottom-5">
+            <div class="container-fluid d-flex">
+                <a class="navbar-brand linkLogo" href="./index.html">
+                    <img class="logo" src="./images/logo.jpg" alt="Logo">
+                    Ropa de muñecas
+                </a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                </form>
+                <div class="iconos me-5">
+                    <button class="btn p-1" type="submit"><i class="fa fa-user fa-xl"
+                            style="color: #f4b5f9;"></i></button>
+                    <button class="btn p-1" type="submit"><i class="fa-solid fa-cart-shopping fa-xl"
+                            style="color: #f4b5f9;"></i></button>
+                </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg rounded-bottom-3 nav2">
+            <div class="container-fluid ">
+                <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
+                    <ul class="navbar-nav text-white">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Novedades</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Productos
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">American-girl</a></li>
+                                <li><a class="dropdown-item" href="#">Barbies</a></li>
+                                <li><a class="dropdown-item" href="#">Mobiliarios</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./images/american.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/barbies.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./images/ropa barbies.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
+    <section>
+        <div class="container-fluid destacados">
+            <div class="row align-items-center">
+                <h2 class="prodDestacados text-center mt-4 p-3">Productos destacados !!!</h2>
+            </div>
+            <div class="row align-items-center">
+                <div class="col card-img shadow-lg p-3 m-5 bg-body-tertiary rounded-3 h-100">
+                    <img src="./images/productos/am-girl.webp" id="img" class="img-fluid imagen" alt="am-girl">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnBuy btn btn-dark " id="btn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                        Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Producto</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./images/productos/am-girl.webp"
+                                                    class="img-fluid rounded-start" alt="american">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">American Girl</h5>
+                                                    <input type="hidden" id="productName" value="American Girl">
+                                                    <input type="hidden" id="productPrice" value="3000">
+                                                    <p class="card-text">American Girl College. Rubia con trenzas y ropa
+                                                        de colegio, mas accesorios</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Podes
+                                                            agregarle otra indumentaria GRATIS!!!
+                                                        </small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="card-text">$3000</p>
+                                    <button type="submit" class="btn btn-light"><i
+                                            class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-img shadow-lg p-3 m-5 bg-body-tertiary rounded-3 h-100">
+                    <img src="./images/productos/am-girl.webp" id="img" class="img-fluid imagen" alt="am-girl">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnBuy btn btn-dark " id="btn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                        Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Producto</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./images/productos/am-girl.webp"
+                                                    class="img-fluid rounded-start" alt="american">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">American Girl</h5>
+                                                    <input type="hidden" id="productName" value="American Girl">
+                                                    <input type="hidden" id="productPrice" value="3000">
+                                                    <p class="card-text">American Girl College. Rubia con trenzas y ropa
+                                                        de colegio, mas accesorios</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Podes
+                                                            agregarle otra indumentaria GRATIS!!!
+                                                        </small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="card-text">$3000</p>
+                                    <button type="submit" class="btn btn-light"><i
+                                            class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card-img shadow-lg p-3 m-5 bg-body-tertiary rounded-3 h-100">
+                    <img src="./images/productos/am-girl.webp" id="img" class="img-fluid imagen" alt="am-girl">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btnBuy btn btn-dark " id="btn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                        Comprar
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel1">Producto</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="./images/productos/am-girl.webp"
+                                                    class="img-fluid rounded-start" alt="american">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">American Girl</h5>
+                                                    <input type="hidden" id="productName" value="American Girl">
+                                                    <input type="hidden" id="productPrice" value="3000">
+                                                    <p class="card-text">American Girl College. Rubia con trenzas y ropa
+                                                        de colegio, mas accesorios</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Podes
+                                                            agregarle otra indumentaria GRATIS!!!
+                                                        </small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <p class="card-text">$3000</p>
+                                    <button type="submit" class="btn btn-light"><i
+                                            class="fa-solid fa-cart-shopping fa-xl"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section >
+        <div class="container-fluid d-flex seccion p-3">
+            <div class="col-4">
+                <ul>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white text-decoration-none ">Inicio</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white text-decoration-none ">Preguntas frecuentes</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white text-decoration-none ">Contactanos</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white text-decoration-none ">Suscribite!!!</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="#" class="text-white text-decoration-none ">Medios de pago</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-8 d-flex flex-column align-items-center p-2">
+                <h2 class="text-white text-center m-3">Seguinos en nuestras redes !!!</h2>
+                <div>
+                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-facebook fa-2xl p-1"></i></a>
+                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-square-instagram fa-2xl p-1"></i></a>
+                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-tiktok fa-2xl p-1"></i></a>
+                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-square-whatsapp fa-2xl p-1"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid p-3">
+            <p>&copy Grupo C4</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
