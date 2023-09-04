@@ -154,7 +154,7 @@ header{
 
 .linkLogo{
     font-family: "Berkshire Swash" !important;
-    color: #ff99ff !important;
+    color: #f6e2fb !important;
 }
 
 .logo{
@@ -188,13 +188,36 @@ header{
 .seccion{
     background-color: #a965b6 !important ;
     align-items: center;
-    height: 200px;
+    height: 250px;
     font-family: "Berkshire Swash" !important;
+}
+
+.container-redes{
+    margin-left: -10%;
+}
+
+.links{
+    font-size: 1.25rem;
+}
+
+.contenedor-iconos{
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icono-redes{
+    font-size: 3rem;
 }
 
 .link-redes{
     text-decoration: none;
     color: #e6a5fa;
+}
+
+.link-redes:hover{
+    text-decoration: none;
+    color: #581b63;
 }
 
 /* footer*/
