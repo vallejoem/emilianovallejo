@@ -126,16 +126,23 @@
 
 header{
     margin: 0;
-}
 
+}
+/*header*/
 .nav1{
     background-color: #9b4fa8;
 }
 .nav2{
     background-color: #a965b6;
 }
-
+.icono-nav{
+    color: #f6e2fb;
+    font-size: 2rem;
+    margin: 10px;
+}
 .nav-item a{
+    font-family: "Comic Neue" !important;
+    font-size: 1.5rem;
     color: #f6e2fb !important;
 }
 .nav-item a:hover{
@@ -161,6 +168,11 @@ header{
     width: 80px;
     margin-left: 50px;
 }
+/*main carousel*/
+
+.btn-slide{
+    background-color: #9b4fa8 !important;
+}
 
 .destacados{
     background-color: #f6e2fb !important;
@@ -171,6 +183,17 @@ header{
     color: #9b4fa8 !important;
 }
 
+.card-img{
+    transition: transform 0.3s ease;
+}
+
+.card-img:hover{
+    transform: scale(1.2);
+}
+
+.img-fluid{
+    height: 35vh !important;
+}
 
 /*modal*/
 

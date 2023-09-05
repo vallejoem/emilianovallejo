@@ -18,10 +18,10 @@
 
 <body>
     <header>
-        <nav class="navbar nav1 border-bottom-5">
+        <nav class="navbar nav1 border-bottom border-dark">
             <div class="container-fluid d-flex">
                 <a class="navbar-brand linkLogo" href="./index.html">
-                    <img class="logo" src="./images/logo.jpg" alt="Logo">
+                    <img class="logo" src="./images/image.png" alt="Logo">
                     Ropa de muñecas
                 </a>
                 <form class="d-flex w-50 p-3" role="search">
@@ -29,14 +29,12 @@
                     <button class="btn btn-outline-light" type="submit">Buscar</button>
                 </form>
                 <div class="iconos me-5">
-                    <button class="btn p-1" type="submit"><i class="fa fa-user fa-xl"
-                            style="color: #f6e2fb;"></i></button>
-                    <button class="btn p-1" type="submit"><i class="fa-solid fa-cart-shopping fa-xl"
-                            style="color: #f6e2fb;"></i></button>
+                    <button class="btn p-1" type="submit"><i class="fa fa-user icono-nav"></i></button>
+                    <button class="btn p-1" type="submit"><i class="fa-solid fa-cart-shopping icono-nav"></i></button>
                 </div>
             </div>
         </nav>
-        <nav class="navbar navbar-expand-lg rounded-bottom-3 nav2">
+        <nav class="navbar navbar-expand-lg rounded-bottom-4 nav2">
             <div class="container-fluid ">
                 <div class="collapse navbar-collapse d-flex justify-content-center" id="navbarNavDropdown">
                     <ul class="navbar-nav text-white">
@@ -68,22 +66,22 @@
     <main>
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active btn-slide"
                     aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
+                    aria-label="Slide 2" class="btn-slide"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+                    aria-label="Slide 3" class="btn-slide"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./images/american.jpeg" class="d-block w-100" alt="...">
+                    <img src="./images/american.jpeg" class="d-block w-100" alt="american-girl">
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/barbies.jpg" class="d-block w-100" alt="...">
+                    <img src="./images/barbies.jpg" class="d-block w-100" alt="barbie">
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/ropa barbies.jpeg" class="d-block w-100" alt="...">
+                    <img src="./images/ropa barbies.jpeg" class="d-block w-100" alt="ropa barbie">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -154,7 +152,7 @@
                     </div>
                 </div>
                 <div class="col card-img shadow-lg p-3 m-5 bg-body-tertiary rounded-3 h-100">
-                    <img src="./images/productos/am-girl.webp" id="img" class="img-fluid imagen" alt="am-girl">
+                    <img src="./images/productos/barbie-rosa.jpeg" id="img" class="img-fluid imagen" alt="barbie">
                     <!-- Button trigger modal -->
                     <button type="button" class="btnBuy btn btn-dark " id="btn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal1">
@@ -175,18 +173,16 @@
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row g-0">
                                             <div class="col-md-4">
-                                                <img src="./images/productos/am-girl.webp"
-                                                    class="img-fluid rounded-start" alt="american">
+                                                <img src="./images/productos/barbie-rosa.jpeg"
+                                                    class="img-fluid rounded-start" alt="barbie">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="card-body">
-                                                    <h5 class="card-title">American Girl</h5>
-                                                    <input type="hidden" id="productName" value="American Girl">
+                                                    <h5 class="card-title">Barbie</h5>
+                                                    <input type="hidden" id="productName" value="barbie">
                                                     <input type="hidden" id="productPrice" value="3000">
-                                                    <p class="card-text">American Girl College. Rubia con trenzas y ropa
-                                                        de colegio, mas accesorios</p>
-                                                    <p class="card-text"><small class="text-body-secondary">Podes
-                                                            agregarle otra indumentaria GRATIS!!!
+                                                    <p class="card-text">Barbie tradicional con flequillo y vestido a cuadros rosa con accesorios.</p>
+                                                    <p class="card-text"><small class="text-body-secondary">Viene con 2 vestidos extra a eleccion!!!
                                                         </small></p>
                                                 </div>
                                             </div>
@@ -194,7 +190,7 @@
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <p class="card-text">$3000</p>
+                                    <p class="card-text">$15000</p>
                                     <button type="submit" class="btn btn-light"><i
                                             class="fa-solid fa-cart-shopping fa-xl"></i></button>
                                 </div>
@@ -203,7 +199,7 @@
                     </div>
                 </div>
                 <div class="col card-img shadow-lg p-3 m-5 bg-body-tertiary rounded-3 h-100">
-                    <img src="./images/productos/am-girl.webp" id="img" class="img-fluid imagen" alt="am-girl">
+                    <img src="./images/productos/mobiliario.jpg" id="img" class="img-fluid imagen" alt="mobiliario">
                     <!-- Button trigger modal -->
                     <button type="button" class="btnBuy btn btn-dark " id="btn" data-bs-toggle="modal"
                         data-bs-target="#exampleModal1">
@@ -224,19 +220,16 @@
                                     <div class="card mb-3" style="max-width: 540px;">
                                         <div class="row g-0">
                                             <div class="col-md-4">
-                                                <img src="./images/productos/am-girl.webp"
-                                                    class="img-fluid rounded-start" alt="american">
+                                                <img src="./images/productos/mobiliario.jpg"
+                                                    class="img-fluid rounded-start" alt="mobiliario">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="card-body">
-                                                    <h5 class="card-title">American Girl</h5>
-                                                    <input type="hidden" id="productName" value="American Girl">
+                                                    <h5 class="card-title">Accesorios dormitorio</h5>
+                                                    <input type="hidden" id="productName" value="mobiliario">
                                                     <input type="hidden" id="productPrice" value="3000">
-                                                    <p class="card-text">American Girl College. Rubia con trenzas y ropa
-                                                        de colegio, mas accesorios</p>
-                                                    <p class="card-text"><small class="text-body-secondary">Podes
-                                                            agregarle otra indumentaria GRATIS!!!
-                                                        </small></p>
+                                                    <p class="card-text">Juego de dormitorio completa con cama, placard y perchero. Incluye ropa de cama</p>
+                                                    <p class="card-text"><small class="text-body-secondary">De regalo una mesa de luz!!!</small></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -259,7 +252,7 @@
             <div class="col-4 ps-4 pt-3">
                 <ul>
                     <li class="list-group-item">
-                        <a href="#" class="links text-white text-decoration-none ">Inicio</a>
+                        <a href="./index.html" class="links text-white text-decoration-none ">Inicio</a>
                     </li>
                     <li class="list-group-item">
                         <a href="#" class="links text-white text-decoration-none ">Preguntas frecuentes</a>
@@ -279,9 +272,9 @@
                 <h2 class="text-white m-3 py-3">Seguinos en nuestras redes !!!</h2>
                 <div class="d-flex contenedor-iconos pb-3">
                     <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-facebook icono-redes p-1"></i></a>
-                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-square-instagram icono-redes p-1"></i></a>
-                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-tiktok icono-redes p-1"></i></a>
-                    <a class="link-redes" href="#" target="_blank"><i class="fa-brands fa-square-whatsapp icono-redes p-1"></i></a>
+                    <a class="link-redes" href="https://www.instagram.com/pascuala2012/" target="_blank"><i class="fa-brands fa-square-instagram icono-redes p-1"></i></a>
+                    <a class="link-redes" href="mailto:" target="_blank"><i class="fa-solid fa-at icono-redes p-1"></i></a>
+                    <a class="link-redes" href="https://api.whatsapp.com/send?phone=5492233023017" target="_blank"><i class="fa-brands fa-square-whatsapp icono-redes p-1"></i></a>
                 </div>
             </div>
         </div>
