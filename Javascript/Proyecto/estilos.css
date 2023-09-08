@@ -126,12 +126,20 @@
 
 header{
     margin: 0;
+    background-color: #581b63;
 
 }
 /*header*/
 .nav1{
     background-color: #9b4fa8;
 }
+
+.text-logo{
+    font-family: "Norican";
+    font-size: 1.5rem;
+    color: #f6e2fb ;
+}
+
 .nav2{
     background-color: #a965b6;
 }
@@ -141,7 +149,7 @@ header{
     margin: 10px;
 }
 .nav-item a{
-    font-family: "Comic Neue" !important;
+    font-family: "Itim" !important;
     font-size: 1.5rem;
     color: #f6e2fb !important;
 }
@@ -164,6 +172,10 @@ header{
     color: #f6e2fb !important;
 }
 
+.boton{
+    color: #f6e2fb !important;
+}
+
 .logo{
     width: 80px;
     margin-left: 50px;
@@ -174,12 +186,19 @@ header{
     background-color: #9b4fa8 !important;
 }
 
+.ppal{
+    background-color: #581b63 !important;
+}
+/*seccion destacados*/
+
 .destacados{
     background-color: #f6e2fb !important;
+    height: 90vh;
 }
 
 .prodDestacados{
-    font-family: "Berkshire Swash" !important;
+    font-family: "Itim" !important;
+    font-size: 3rem !important;
     color: #9b4fa8 !important;
 }
 
@@ -211,8 +230,9 @@ header{
 .seccion{
     background-color: #a965b6 !important ;
     align-items: center;
+    justify-content: center;
     height: 250px;
-    font-family: "Berkshire Swash" !important;
+    font-family: "Itim" !important;
 }
 
 .container-redes{
@@ -224,9 +244,9 @@ header{
 }
 
 .contenedor-iconos{
-    width: 30%;
+    
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .icono-redes{
@@ -245,5 +265,18 @@ header{
 
 /* footer*/
 footer{
-    background-color: #9b4fa8 ;
+    background-color: #581b63 ;
+}
+
+.main-nosotros{
+    background-image: linear-gradient(rgba(193, 65, 244, 0.5),rgba(246, 239, 248, 0.5)), url(./IMAGES/image.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+/*parrafo nosotros*/
+.historia{
+    font-family: "Itim" !important;
+    font-size: 1.2rem;
 }
